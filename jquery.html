@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manipulação Jquery em javascript</title>
+    <script type="text/javascript" src="https://code.Jquery.com/Jquery-3.5.1.js"></script>
+</head>
+<body>
+    <div>
+        <h1>título da primeira div </h1>
+        <p> (1º p) texto inicial do parágrafo da primeira div </p>
+    </div>
+
+    <div>
+        <h2> subtítulo na segunda div</h2>
+        <p>texto inicial do parágrafo da segunda div</p>
+    </div>
+    
+        <h3>parágrafos com Span</h3>
+        
+        <p>
+            texto do parágrafo
+            <span>texto do span</span>
+        </p>
+
+        <p>
+            texto do parágrafo
+            <span>texto do span</span>
+        </p>
+
+        <p>
+            texto do parágrafo
+            <span>texto do span</span>
+        </p>
+
+        <p>
+            texto do parágrafo
+            <span>texto do span</span>
+        </p>
+<script type="text/javascript">
+    //sobrescrevendo o texto atual do primeiro parágrafo do documento por um novo texto
+ $ ('p') .first ().html ("Este texto sobrescreve o inicial");
+
+// Adicionando um novo conteúdo junto ao conteúdo existente
+// Foi utilizado o seletor first () para selecionar o primeiro elemento <p>
+    $ ('p') .first ().append("E esse texto é adicionado ao final do novo texto");
+// Uma outra forma de adicionar um novo conteúdo junto ao conteúdo já existente.
+// Foi utilizado o seletor last() para selecionar o ultimo elemento <p>
+$ ('p') .last ().html ( $ ('p'). last ().html () + "Esse texto é adicionado ao final do texto existente" );
+// Removendo o conteúdo da tag <span>
+// Foi utilizado o seletor find() para localizar os elementos <span> dentro dos elementos <p>
+$ ('p') .find('span').html (''); 
+
+
+</script>
+
+
+
+    
+    
+</body>
+</html>
